@@ -1,0 +1,23 @@
+Entrada a la Página Principal
+Usuario: Interesado en viajar a la Luna y busca información sobre alojamiento.
+Acción: El usuario ingresa a la página principal de Luna Tunes.
+Expectativa: Ver información clara sobre las opciones de alojamiento, transporte y actividades.
+
+Navegación y Claridad
+Usuario: Quiere ver opciones de hoteles.
+Acción: Navega por la barra de menú y selecciona "Alojamiento".
+Expectativa: La página de alojamiento carga rápidamente, mostrando una variedad de hoteles con imágenes claras, descripciones y precios.
+
+
+Información Adicional y Accesibilidad
+Usuario: Necesita más detalles sobre el hotel y sus servicios.
+Acción: Explora las secciones desplegables bajo cada hotel para información adicional.
+Expectativa: La información es accesible y fácil de entender, con detalles sobre servicios, accesibilidad y opciones de entretenimiento.
+
+
+Observaciones
+Usabilidad: El sitio es intuitivo y fácil de navegar. La información está bien organizada, haciendo que la reserva sea un proceso simple.
+Diseño y Accesibilidad: El diseño es atractivo y coherente con el tema espacial. Los contrastes de color y el tamaño de la fuente son adecuados para una buena legibilidad. Las imágenes son descriptivas y complementan la información proporcionada.
+Funcionalidad: Todas las funciones, como los desplegables y los botones de reserva, funcionan como se espera. Los formularios de reserva son claros y no requieren información innecesaria.
+Mejoras Sugeridas: Podría incluirse un chat en vivo para preguntas rápidas y asistencia durante el proceso de reserva. Además, sería útil tener reseñas de clientes anteriores para cada hotel.
+Este escenario ficticio asume un diseño web y funcionalidades ideales basadas en las descripciones y correcciones discutidas previamente.

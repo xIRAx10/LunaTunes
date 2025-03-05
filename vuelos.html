@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viajes Luna Tunes</title>
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="icon" type="image/png" href="images/logolunatunes.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Russo+One&family=Tenor+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Geo:ital@0;1&family=Russo+One&family=Tenor+Sans&family=Turret+Road:wght@700&display=swap" rel="stylesheet">
+    <style>
+
+.russo-one-regular {
+        font-family: "Russo One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        }
+
+        .aldrich-regular {
+  font-family: "Aldrich", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.geo-regular {
+  font-family: "Geo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+button,h4{
+    font-family: "Geo";
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+p,h3,small,li{ /* quito span por tema del titulo de la pagina */
+    font-family: "Aldrich";
+    font-weight: lighter;
+}
+
+        h1,h2{
+            font-family: "Russo One";
+            text-shadow: none;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            background-color: rgb(233, 227, 227);
+        }
+
+        nav {
+    background-color: rgb(10, 14, 71);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0; /* Asegúrate de que la barra de navegación comience desde el borde izquierdo */
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px; /* Añade un poco de espacio a los lados */
+}
+
+.logo {
+    height: auto;
+    width: 80px; /* Ajusta esto al tamaño de tu logo */
+    margin-right: 20px; /* Espacio entre el logo y los enlaces de navegación */
+}
+
+.navbar-links ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    padding: 0 10px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form input {
+    padding: 5px;
+    margin-right: 10px; /* Espacio entre el input y el botón de búsqueda */
+    border-radius: 10px;
+    border: 1px solid #fff;
+}
+
+.botonLupa {
+    padding: 0px 10px;
+    margin-right: 20px;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(10, 14, 71);
+    color: white;
+    margin-top: 60px;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+}
+
+.reservaCohete{
+    background: url('images/coheteLuna.jpg') no-repeat 0% 95px ;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 700px;
+    border-bottom: 1px solid gray;
+    margin-top: -49px;
+    padding: 20px;
+    box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.9);
+}
+
+.tituloLuna{
+    color: white;
+    font-size: 2em;
+    display: block;
+}
+.colorLogo{
+    background: linear-gradient(to right,rgb(123, 89, 247),violet);
+    -webkit-background-clip: text; /* Esto es para aplicar el gradiente al texto */
+    background-clip: text; /* Esto es para aplicar el gradiente al texto */
+    color: transparent; /* Esto hace que el texto sea transparente */
+    display: block;
+    
+}
+
+.contenedorTitulo{
+    text-transform: uppercase;
+    width:300px;
+    margin-left: 21%;
+    margin-top: 7%;
+    font-size: 1.3em;
+    margin-top: 130px;
+}
+
+.empujar{
+    margin-left: 16px;
+}
+
+.contenedorTitulo::after {
+    content: ''; /* Añade un contenido vacío para el pseudoelemento */
+    display: block; /* Hace que el pseudoelemento sea un bloque */
+    width: 92%; /* Ancho igual al del elemento padre */
+    
+    margin-top: 0px;
+    height: 4px; /* Grosor del "borde" */
+    background-image: linear-gradient(to right, rgb(123, 89, 247),violet); /* Aplica el gradiente lineal al pseudoelemento */
+}
+.textoLuna{
+    color: white;
+    width:350px;
+    margin-left: 20%;
+    font-size: 1.1em;
+}
+
+.diasYpreciosVuelos{
+    width: 60%;
+    height: 20%;
+    margin:auto;
+    margin-top: 5%;
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.infoCalendarioPrecio{
+    width: auto;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-right: 1px solid rgb(207, 200, 200);
+    background-color: white;
+    box-shadow: 0px 4px 4px -4px rgba(0, 0, 0, 0.9);
+}
+
+.infoCalendarioPrecio:last-of-type{
+    border: none;
+}
+
+.infoCalendarioPrecio:hover{
+    box-shadow: -5px 5px 5px -5px rgba(0, 0, 0, 0.9), /* Sombra hacia la izquierda */
+                0px 10px 10px -5px rgba(0, 0, 0, 0.9), /* Sombra hacia abajo */
+                5px 0px 5px -5px rgba(0, 0, 0, 0.9);
+
+    z-index: 2;
+
+}
+
+
+.infoCalendarioPrecio:hover::after {
+    content: ''; /* Añade un contenido vacío para el pseudoelemento */
+    display: block; /* Hace que el pseudoelemento sea un bloque */
+    width: 100%; /* Ancho igual al del elemento padre */
+    height: 4px; /* Grosor del "borde" */
+    background-image: linear-gradient(to right, rgb(123, 89, 247),violet); /* Aplica el gradiente lineal al pseudoelemento */
+}
+
+.infoCalendarioPrecio p {   
+    text-align: center; /* Centrar el texto dentro de los párrafos */
+}
+
+.horario{
+    width: 70%;
+    height: 20%;
+    margin:auto;
+    box-shadow: 0px 4px 4px -4px rgba(0, 0, 0, 0.9);
+    display: flex;
+    background-color: white;
+}
+
+.horario h2{
+    font-size: 1.8em;
+    font-weight: normal;
+    text-shadow: 0 0 1px rgba(0,0,0,0.8);
+}
+
+.logoHorario{
+    height: 100px;
+    width: 100px;
+    margin-left: 40px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.horas{
+    height: 100%;
+    border-left: 1px solid rgb(176, 180, 176);
+    border-right: 1px solid rgb(176, 180, 176);
+    width: 50%;
+    margin-left: 40px;
+    display: flex;
+    border-style: dashed;
+    border-top: none;
+    border-bottom: none;
+   
+    align-items: center; /* Para centrar verticalmente los elementos */
+    box-sizing: border-box; /* Para incluir el padding y el borde en el tamaño total */
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+.fotoMiniCohete{
+    background: url('images/coheteIcono.png') no-repeat 10%;
+    width: 30px;
+    height: 35px;
+    background-size: 40px;
+    margin-left: 30%;
+    display: flex;
+    justify-content: center; /* Centra los elementos hijos horizontalmente */
+    align-items: center; /* Centra los elementos hijos verticalmente */
+    position: relative;
+}
+
+.fotoMiniCohete::before{
+    content:'';
+    display: block; /* Hace que el pseudoelemento sea un bloque */
+    width: 450%; /* Ancho igual al del elemento padre */
+    height: 3px; /* Grosor del "borde" */
+    background-image: linear-gradient(to left, rgb(123, 89, 247),rgb(255, 255, 255));
+    position: absolute; 
+    margin-left: -600%;
+}
+
+.fotoMiniCohete::after{
+    content:'';
+    display: block; /* Hace que el pseudoelemento sea un bloque */
+    width: 450%; /* Ancho igual al del elemento padre */
+    height: 3px; /* Grosor del "borde" */
+    background-image: linear-gradient(to right, rgb(123, 89, 247),rgb(255, 255, 255));
+    position: absolute; 
+    margin-left: 670%;
+}
+
+.primeraHora{
+    margin-left: 5%;
+}
+
+.segundaHora{
+    margin-left: 32%;
+}
+
+.dia {
+    color: rgb(9, 91, 214); /* Define el color del texto para los elementos con la clase 'dia' */
+    font-weight: bold;
+}
+
+.precio{
+    font-weight: bold;
+    color: rgb(18, 18, 141);
+    font-size: 1.4em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.queIncluye{
+margin-top: 40px;
+display: flex;
+margin-left: 57%;
+color: rgb(9, 91, 214);
+font-weight: bold;
+font-size: small;
+font-family: "Aldrich";
+}
+
+.queIncluyePrecio{
+    height: 100%;
+    width: 16%;
+    margin-top: 10px;
+}
+
+.precioCard{
+    font-weight: bold;
+    color: rgb(18, 18, 141);
+    font-size: 1.42em;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-left: 35%;
+
+}
+
+.enlaceDia{
+    text-decoration-color: rgb(9, 91, 214);
+    margin: 10px;
+}
+
+.seleccionar{
+    width: 16%;
+    height: 100%;
+    display: flex;
+    margin-left: 40px;
+}
+
+.btnSeleccionar{
+    margin-top: 25%;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    border-radius: 10px;
+    color: rgb(243, 243, 243);
+    background: linear-gradient(to right, #071ac9, #046fc7);
+}
+
+.btnSeleccionar:hover{
+    background: linear-gradient(to right, #0c1a9c, #0b528b);
+}
+
+.btnSeleccionar:focus{
+    background: #0c1a9c;
+}
+
+.tituloHorarios{
+    color: rgb(18, 18, 141);
+    margin-top: 5%;
+    margin-left: 15%;
+    font-size: 2em;
+}
+
+
+#accordion { 
+		    width: 50%; 
+		    margin: 0 auto;
+            margin-top: 10%;
+		    padding: 5px; 
+            border: 10px solid rgb(10, 14, 71); 
+            border-radius: 10px;
+            background-color: white;
+		} 
+
+		h3 { 
+		    margin-top: 20px; 
+		    padding: 5px; 
+		   
+		} 
+
+		h3 a { 
+		    text-decoration: none; 
+		    color: rgb(7, 0, 0) 
+		} 
+
+		#accordion.section { 
+		    background-color: white; 
+		    border-bottom: 1px solid #333; 
+		    
+		} 
+
+		p.texto { 
+		    margin: 0; 
+		    padding: 3px; 
+            margin-top: 10px;
+            margin-bottom: 10px;
+		}
+
+		#accordion .section  div {
+		    height: 0;
+		    overflow: hidden;
+		    transition: height 0.3s ease-in;
+		}
+
+		#accordion .section:target div {
+		    height: 150px;
+    		overflow: auto;		
+		}
+
+        .tituloAcordeon{
+            text-align: center;
+            margin-top: 2%;
+            font-size: 2em;
+        }
+
+        
+
+
+        #accordion .section h3::after {
+            content: '\25BE';
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        #accordion .section:target h3::after {
+            content: '\25B4';
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        #accordion h3{
+        font-size: 1.2em
+    }
+
+        .section a{
+            font-weight: bold;
+        }
+
+        .divmapa {
+           width: 80%;
+           margin-left: auto;
+           margin-right: auto;
+           margin-top: 10%;
+        }
+
+        
+
+        
+
+        .contMapaAcordeon{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(700px, 1fr));
+            width: 80%;
+            margin-top: 5%;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+
+        video{
+            margin-top: 10%;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            border-radius: 10px;
+            padding-bottom: 0px;
+        }
+
+        iframe{
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 880px) {
+    /* Estilos para pantallas más pequeñas */
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar-links,
+    .search-form {
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .search-form input {
+        width: 100%;
+        margin: 10px 0; /* Añade espacio vertical para pantallas más pequeñas */
+    }
+
+    .logo{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .reservaCohete{
+        margin-top: 10%;
+        background: none;
+        background-color: black;
+    }
+
+    .contenedorTitulo{
+        margin-top: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .textoLuna{
+        margin-left: auto;
+        margin-right: auto;
+    }
+ }
+
+ .accesibilidad{
+    display: none;
+ }
+ 
+
+
+    </style>
+    </head>
+<body>
+
+
+<nav>
+    <div class="navbar">
+        <a class="navbar-brand" href="inicio.html"><img class="logo" src="images/logolunatunes.png" alt="Logo de Luna Tunes"></a>
+        <div class="navbar-links">
+            <ul>
+                <li><a class="nav-link" href="pda.html">Actividades</a></li>
+                <li><a class="nav-link" href="pulseras.html">Entradas</a></li>
+                <li><a class="nav-link" href="hoteles.html">Alojamiento</a></li>
+                <li><a class="nav-link" href="vuelos.html">Transporte</a></li>
+            </ul>
+        </div>
+        <form class="search-form" role="search">
+            <input class="form-control inputNav" type="search" placeholder="Buscar" aria-label="Buscar">
+            <button class="btn btn-outline-success botonLupa material-symbols-outlined" type="submit"> search</button>
+        </form>
+    </div>
+</nav>
+
+<br><br>
+
+
+<div class="reservaCohete" aria-label="Imagen de un cohete en la luna">
+    <div class="contenedorTitulo">
+    <h1 class="tituloLuna"><span class="empujar">Viaja</span> con <span class="colorLogo">Luna Tunes</span></h1>
+    </div>
+
+    <div class="textoLuna">
+    <h3>
+        Con Luna Tunes, no solo estarás viajando a la Luna, 
+        estarás viviendo una experiencia musical que quedará 
+        grabada en tu memoria para siempre. <br><br>¡Atrévete a ser 
+        parte de esta increíble aventura y únete a nosotros 
+        en el viaje de tus sueños!
+    </h3>
+    </div>
+</div>
+
+<section id="informacion"></section>
+<div class="diasYpreciosVuelos">
+    <div class="infoCalendarioPrecio" >
+        <a href="#jueves" class="enlaceDia"><p class="dia">08 febrero</p></a>
+        <p>Jueves</p>
+        <p class="precio">2.229,99 €</p>
+    </div>
+    
+    <div class="infoCalendarioPrecio">
+        <a href="#jueves" class="enlaceDia"><p class="dia">09 febrero</p></a>
+        <p>Viernes</p>
+        <p class="precio">2.399,99 €</p>
+    </div>
+    <div class="infoCalendarioPrecio">
+        <a href="#viernes" class="enlaceDia"><p class="dia">10 febrero</p></a>
+        <p>Sábado</p>
+        <p class="precio">2.359,99 €</p>
+    </div>
+    <div class="infoCalendarioPrecio">
+        <a href="#sabado" class="enlaceDia"><p class="dia">11 febrero</p></a>
+        <p>Domingo</p>
+        <p class="precio">2.509,99 €</p>
+    </div>
+    <div class="infoCalendarioPrecio">
+        <a href="#domingo" class="enlaceDia"><p class="dia">12 febrero</p></a>
+        <p>Lunes</p>
+        <p class="precio">2.489,99 €</p>
+    </div>
+</div>
+
+<span id="jueves"></span>
+<h2 class="tituloHorarios">Jueves 08</h2>
+<div class="horario">
+        <img src="images/logolunatunes.png" alt="Logo de Luna Tunes" class="logoHorario"/>
+        <div class="horas">
+            <h2 class="primeraHora">10:30</h2>
+            <div class="fotoMiniCohete"></div>
+            <h2 class="segundaHora">22:30</h2>
+        </div>
+        <div class="queIncluyePrecio">
+            <a href="#" class="queIncluye">¿Que incluye?</a>
+            <p class="precioCard">2.229,99 €</p>
+        </div>
+        <div class="seleccionar">
+
+            <button class="btnSeleccionar">Reservar</button>
+        </div>
+</div>
+
+<h2 class="tituloHorarios">Viernes 09</h2>
+<div class="horario" id="viernes">
+    <img src="images/logolunatunes.png" alt="Logo de Luna Tunes" class="logoHorario"/>
+    <div class="horas">
+        <h2 class="primeraHora">05:00</h2>
+        <div class="fotoMiniCohete"></div>
+        <h2 class="segundaHora">17:00</h2>
+    </div>
+    <div class="queIncluyePrecio">
+        <a href="#" class="queIncluye">¿Que incluye?</a>
+        <p class="precioCard">2.399,99 €</p>
+    </div>
+    <div class="seleccionar">
+
+        <button class="btnSeleccionar">Reservar</button>
+    </div>
+</div>
+
+
+<h2 class="tituloHorarios">Sábado 10</h2>
+<div class="horario" id="sabado">
+    <img src="images/logolunatunes.png" alt="Logo de Luna Tunes" class="logoHorario"/>
+    <div class="horas">
+        <h2 class="primeraHora">08:15</h2>
+        <div class="fotoMiniCohete"></div>
+        <h2 class="segundaHora">20:45</h2>
+    </div>
+    <div class="queIncluyePrecio">
+        <a href="#" class="queIncluye">¿Que incluye?</a>
+        <p class="precioCard">2.359,99 €</p>
+    </div>
+    <div class="seleccionar">
+
+        <button class="btnSeleccionar">Reservar</button>
+    </div>
+</div>
+
+<h2 class="tituloHorarios">Domingo 11</h2>
+<div class="horario" id="domingo">
+    <img src="images/logolunatunes.png" alt="Logo de Luna Tunes" class="logoHorario"/>
+    <div class="horas">
+        <h2 class="primeraHora">07:00</h2>
+        <div class="fotoMiniCohete"></div>
+        <h2 class="segundaHora">19:00</h2>
+    </div>
+    <div class="queIncluyePrecio">
+        <a href="#" class="queIncluye">¿Que incluye?</a>
+        <p class="precioCard">2.509,99 €</p>
+    </div>
+    <div class="seleccionar">
+
+        <button class="btnSeleccionar">Reservar</button>
+    </div>
+</div>
+
+
+<h2 class="tituloHorarios">Lunes 12</h2>
+<div class="horario" id="lunes">
+    <img src="images/logolunatunes.png" alt="Logo de Luna Tunes" class="logoHorario"/>
+    <div class="horas">
+        <h2 class="primeraHora">10:15</h2>
+        <div class="fotoMiniCohete"></div>
+        <h2 class="segundaHora">22:15</h2>
+    </div>
+    <div class="queIncluyePrecio">
+        <a href="#" class="queIncluye">¿Que incluye?</a>
+        <p class="precioCard">2.489,99 €</p>
+    </div>
+    <div class="seleccionar">
+        <button class="btnSeleccionar">Reservar</button>
+    </div>
+</div>
+
+<div class="contMapaAcordeon">
+
+    <div class="divmapa" aria-label="Mapa donde se muestra la localización del Centro de control de lanzamiento y aterrizaje de SpaceX">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.067030825342!2d-80.60748608832681!3d28.417234193722766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e0a641e6cf4bfb%3A0x87ac9af0f05b1cff!2sSpaceX%20Launch%20and%20Landing%20Control%20Center!5e0!3m2!1ses!2ses!4v1707991693401!5m2!1ses!2ses" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Centro de control de lanzamiento y aterrizaje de SpaceX"></iframe>    
+    </div>
+
+    
+    <video controls alt="El video presenta el emocionante lanzamiento de un cohete desde la plataforma de lanzamiento, con llamas ardientes y humo ascendiendo hacia el cielo. A medida que el cohete se eleva, su forma aerodinámica corta el aire, dejando atrás una estela de vapor y fuego mientras se aleja de la Tierra.
+    Conforme avanza el vídeo, el cohete se proyecta cada vez más lejos, adentrándose en el espacio exterior. A lo largo de su trayectoria, la cámara sigue al cohete mientras se aleja, revelando la vasta oscuridad del cosmos y las estrellas que lo rodean.
+    En el fondo, la majestuosa Luna se vislumbra gradualmente, su superficie rocosa y cráteres ofrecen un telón de fondo impresionante para el ascenso del cohete. Sin embargo, en lugar de aterrizar, el cohete permanece en el horizonte lunar, iluminado por la luz del sol, como un intrépido explorador en ruta hacia un destino desconocido en el vasto universo.
+    El vídeo culmina con una vista espectacular de la Luna en todo su esplendor, mientras el cohete continúa su viaje hacia lo desconocido, desapareciendo lentamente en la distancia mientras se adentra en el espacio profundo.">
+        <source src="images/videoNASA.mp4" type="video/mp4">
+        <track kind="subtitles" src="subtitulos_es.vtt" srclang="es" label="Español">
+        <p>Tu navegador no admite la etiqueta de video.</p> 
+      </video>
+      <div class="accesibilidad">
+        <p>Transcripción de los diálogos aquí...</p>
+        <p>Descripción de los sonidos aquí...</p>
+      </div>
+
+</div>
+
+
+<div id="accordion"> 
+    <h2 class="tituloAcordeon">Preguntas frecuentes</h2>
+    <div id="uno" class="section"> 
+        <h3><a href="#uno">¿Desde dónde saldrá el cohete?</a></h3> 
+        <div> 
+            <p class="texto">"Los cohetes que operamos para nuestros viajes hacia la Luna tienen su punto de partida en la prestigiosa Estación de la NASA, localizada específicamente en Florida.<br><br> Esta ubicación estratégica nos permite garantizar la máxima seguridad y eficiencia en nuestros lanzamientos, respaldados por décadas de experiencia y tecnología de vanguardia en la exploración espacial.<br><br> Estamos comprometidos con brindar a nuestros clientes una experiencia de viaje excepcional desde el momento en que embarcan en nuestra misión, y la elección de la Estación de la NASA en Florida como punto de partida refleja nuestro compromiso con los más altos estándares de calidad y seguridad en cada etapa del viaje."
+            </p> 
+        </div> 
+    </div> 
+    <div id="dos" class="section"> 
+        <h3><a href="#dos">¿Cuál es la duración estimada del vuelo hacia la Luna?</a></h3> 
+        <div> 
+            <p class="texto">"La duración estimada del vuelo hacia la Luna es de 12 horas. Sin embargo, es importante tener en cuenta que esta duración puede variar debido a factores como la presencia de asteroides u otros eventos espaciales imprevistos que puedan surgir durante el viaje.<br><br> Nuestro equipo de expertos en control de misiones está preparado para manejar cualquier eventualidad y garantizar la seguridad y comodidad de todos nuestros pasajeros durante el trayecto."</p> 
+        </div> 
+    </div> 
+    <div id="tres" class="section"> 
+        <h3><a href="#tres">¿Cuál es el protocolo de seguridad en caso de emergencia?</a></h3> 
+        <div> 
+            <p class="texto">"Nuestro protocolo de seguridad en caso de emergencia durante el vuelo hacia la Luna está diseñado para garantizar la seguridad y el bienestar de todos los pasajeros y tripulación a bordo.<br><br> En caso de una situación de emergencia, nuestro equipo altamente capacitado seguirá estrictamente los procedimientos establecidos": </p> 
+                <ul>
+                    <li>evaluación de la situación</li>
+                    <li>comunicación clara de las instrucciones de seguridad a los pasajeros</li>
+                    <li>implementación de medidas apropiadas para mitigar cualquier riesgo potencial</li>
+                </ul> 
+        </div> 
+    </div> 
+</div>
+
+
+
+
+
+    <!-- Footer -->
+<footer>
+    <p>&copy; 2024 LunaTunes. Todos los derechos reservados.</p>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luna Tunes</title>
+    <link rel="icon" type="image/png" href="images/logolunatunes.png">
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Russo+One&family=Tenor+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Geo:ital@0;1&family=Russo+One&family=Tenor+Sans&family=Turret+Road:wght@700&display=swap" rel="stylesheet">
+    <style>
+
+.russo-one-regular {
+        font-family: "Russo One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        }
+
+        .aldrich-regular {
+  font-family: "Aldrich", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.geo-regular {
+  font-family: "Geo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+button,h4{
+    font-family: "Geo";
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+p,h3,span,small,li{
+    font-family: "Aldrich";
+    font-weight: lighter;
+}
+
+        h1,h2{
+            font-family: "Russo One";
+            text-shadow: none;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+
+        nav {
+    background-color: rgb(10, 14, 71);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0; /* Asegúrate de que la barra de navegación comience desde el borde izquierdo */
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px; /* Añade un poco de espacio a los lados */
+}
+
+.logo {
+    height: auto;
+    width: 80px; /* Ajusta esto al tamaño de tu logo */
+    margin-right: 20px; /* Espacio entre el logo y los enlaces de navegación */
+}
+
+.navbar-links ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    padding: 0 10px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form input {
+    padding: 5px;
+    margin-right: 10px; /* Espacio entre el input y el botón de búsqueda */
+    border-radius: 10px;
+    border: 1px solid #fff;
+}
+
+.botonLupa {
+    padding: 0px 10px;
+    margin-right: 20px;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+.reservaCohete{
+    background: url('images/festi.png') no-repeat 0% 95px ;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 700px;
+    border-bottom: 1px solid gray;
+    margin-top: -47px;
+    padding: 20px;
+    box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.9);
+}
+
+.tituloLuna{
+    color: white;
+    font-size: 2em;
+    display: block;
+}
+.colorLogo{
+    background: linear-gradient(to right,rgb(123, 89, 247),violet);
+    -webkit-background-clip: text; /* Esto es para aplicar el gradiente al texto */
+    background-clip: text; /* Esto es para aplicar el gradiente al texto */
+    color: transparent; /* Esto hace que el texto sea transparente */
+    display: block;
+}
+
+.contenedorTitulo{
+    text-transform: uppercase;
+    width:400px;
+    margin-left: 21%;
+    margin-top: 150px;
+}
+
+.empujar{
+    margin-left: 16px;
+}
+
+.contenedorTitulo::after {
+    content: ''; 
+    display: block; 
+    width: 92%; 
+    margin-top: 0px;
+    height: 4px; 
+    background-image: linear-gradient(to right, rgb(123, 89, 247),violet); 
+}
+.textoLuna{
+    color: white;
+    width:400px;
+    margin-left: 21%;
+    font-size: 1.1em;
+    margin-top: 30px;
+}
+
+h1{
+    font-size: 2em;
+}
+
+
+        .card-container {
+            display: grid;
+            justify-content: space-around;
+            margin: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .card {
+            width: 60%;
+            text-align: center;
+            transition: transform 0.1s;
+            background-color: rgb(10, 14, 71);
+            margin: 5px;
+            color: white;
+            padding: 10px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .card-img-top {
+            width: 100%;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.1); /* Aplica la transformación a la tarjeta cuando el ratón está sobre ella */
+        }
+        
+
+        section h1 {
+            margin-top: 17%;
+            font-size: 3em;
+            width: 55%;
+            color: rgb(9, 207, 241);
+            margin-left: 10%;
+        }
+
+        .lead {
+            color: rgb(9, 207, 241);
+            width: 30%;
+            margin-left: 20%;
+        }
+
+       
+
+        .text-section h2, .text-section h3, .text-section p {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .text-section h2{
+            font-size: 1.8em;
+        }
+
+        .box-container {
+            display: grid;
+            justify-content: space-around;
+            margin: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(470px, 1fr));
+        }
+
+        .box {
+            width: 60%;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: rgb(10, 14, 71);
+            color: white;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .box-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: linear-gradient(to bottom ,rgb(11, 121, 155),skyblue);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.3em;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+        }
+
+        .box-button:hover{
+            background: linear-gradient(to bottom ,skyblue,rgb(13, 71, 138));
+        }
+
+
+        .form-playlist-container {
+    display: grid;
+    justify-content: space-around;
+    align-items: flex-start; /* Cambiado de stretch a flex-start para evitar estiramiento */
+    margin: 50px;
+    gap: 20px; /* Añade un espacio entre los elementos */
+    grid-template-columns: repeat(auto-fit, minmax(470px, 1fr));
+}
+
+.form-container {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Alinea los elementos del formulario al inicio */
+    border: 10px solid rgb(10, 14, 71);
+    background-color: skyblue;
+    border-radius: 10px;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container label,
+.form-container input,
+.form-container textarea {
+    margin-bottom: 0px;
+    width: 40%; 
+}
+
+.form-container textarea{
+    height: 180px;
+    border: 3px solid rgb(10, 14, 71);
+    margin-bottom: 35px;
+}
+
+.form-container input{
+    height: 30px;
+    border: 3px solid rgb(10, 14, 71);
+}
+
+.spotify-playlist-container {
+    flex: 1; /* Asegura que el contenedor de la playlist ocupe la mitad del espacio */
+    max-height: 632px; /* Altura máxima para el contenedor de la playlist */
+    overflow-y: auto; /* Habilita el desplazamiento vertical si es necesario */
+    border: 10px solid rgb(10, 14, 71);
+    padding: 10px;
+    background-color: skyblue;
+    border-radius: 10px;
+}
+
+
+
+    iframe {
+    width: 100%; 
+    margin-bottom: 10px; 
+}
+
+.Solicitud{
+    text-align: center;
+    font-size: 1.8em;
+    color: #000;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    
+}
+
+
+
+.promociones{
+    background-color: rgb(143, 101, 179);
+    border: 15px solid rgb(36, 10, 71);
+    margin: 0 50px ;
+    border-radius: 10px;
+    color: white;
+
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(10, 14, 71);
+    color: white;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+#email{
+ background:  url('images/spriteImg.jpg') no-repeat 0% -1px;
+ background-size: 30px auto;
+ padding-left: 30px;
+ background-color: white;
+ box-sizing: border-box;
+}
+
+#pais{
+    background: white url('images/spriteImg.jpg') no-repeat 0% -88px;
+    background-size: 27px auto;
+    box-sizing: border-box;
+    padding-left: 30px;
+}
+
+.box h3{
+    font-size: 1.1em;
+    margin-top: 10%;
+}
+
+
+
+
+        @media (max-width: 1020px) {
+    /* Estilos para pantallas más pequeñas */
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar-links,
+    .search-form {
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .search-form input {
+        width: 100%;
+        margin: 10px 0; /* Añade espacio vertical para pantallas más pequeñas */
+    }
+
+    .logo{
+        margin-left: 40%;
+    }
+
+    .reservaCohete{
+        margin-top: 7%;
+        background: none;
+        background-color: black;
+    }
+
+    .contenedorTitulo{
+        margin-top: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .textoLuna{
+        margin-left: auto;
+        margin-right: auto;
+    }
+ }
+
+ .reservaCohete .box-button{
+    display: inline;
+ }
+
+ .box .box-button{
+    margin-bottom: 0px;
+    margin-top: 30px;
+    justify-content: center;
+
+ }
+
+ .card h2{
+    font-size: 1.6em;
+    margin-bottom: 10px;
+ }
+ 
+ .text-section h3{
+    font-size: 1.3em;
+ }
+
+ .imgCartelera{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    height: auto;
+    border: 10px double black;
+    border-radius: 20px;
+ }
+
+ .cartelera{
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ @media (max-width: 980px) {
+    .imgCartelera{
+        width: 90%;
+    }
+ }
+ 
+
+
+    </style>
+    </head>
+<body>
+
+<!-- Navegación -->
+<nav>
+    <div class="navbar">
+        <a href="inicio.html"><img class="logo" src="images/logolunatunes.png" alt="Logo de Luna Tunes"></a>
+        <div class="navbar-links">
+            <ul>
+                <li><a class="nav-link" href="pda.html">Actividades</a></li>
+                <li><a class="nav-link" href="pulseras.html">Entradas</a></li>
+                <li><a class="nav-link" href="hoteles.html">Alojamiento</a></li>
+                <li><a class="nav-link" href="vuelos.html">Transporte</a></li>
+            </ul>
+        </div>
+        <form class="search-form" role="search">
+            <input  type="search" placeholder="Buscar" aria-label="Buscar">
+            <button class=" botonLupa material-symbols-outlined" type="submit"> search</button>
+        </form>
+    </div>
+</nav>
+
+<!-- Sección Principal -->
+<header>
+    <div class="reservaCohete" aria-label="Imagen de un cohete de la Nasa en la luna">
+    
+        <div class="contenedorTitulo">
+            <h1 class="tituloLuna">Sintoniza tus sentidos a la gravedad cero</h1>
+        </div>
+    
+            <div class="textoLuna">
+                <h3>
+                    Descubre el ritmo del universo: El Festival Lunar de Música, una experiencia única de sonido y espectáculo en el manto estelar
+                </h3>
+                <button type="button" class="box-button">Buy now</button>
+                <button type="button" class="box-button">Contact</button>
+            </div>
+    </div>
+</header>
+
+<!-- Cards -->
+
+<article id="contenido-principal">
+<div class="card-container">
+    <div class="card">
+        <h2>Pulseras</h2>
+        <img class="card-img-top" src="images/pulseras3.png" alt="Imagen de 3 manos con pulseras">
+        <a href="pulseras.html"><button class="box-button">Adquirir</button></a>
+    </div>
+    <div class="card">
+        <h2>Parque temático</h2>
+        <img class="card-img-top" src="images/pda.png" alt="Imagen de un parque de atracciones en la luna">
+        <a href="pda.html"><button class="box-button">Visitar</button></a>
+    </div>
+    <div class="card">
+        <h2>Alojamientos</h2>
+        <img class="card-img-top" src="images/hotel1.png" alt="Imagen de un hotel en la luna">
+        <a href="hoteles.html"><button class="box-button">Reservar</button></a>
+    </div>
+    <div class="card">
+        <h2>Viaje</h2>
+        <img class="card-img-top" src="images/viaje2.png" alt="Imagen de un cohete saliendo de la luna">
+        <a href="vuelos.html"><button class="box-button">Comprar</button></a>
+    </div>
+</div>
+</article>
+
+
+<article>
+<div class="promociones">
+    <!-- Sección de Título y Párrafo -->
+    <div class="text-section">
+        <h2>PROMO RECARGA</h2>
+        <h3>Este año se paga todo con pulsera</h3>
+        <p>Recargando tu pulsera ahora te llevas dinero extra GRATIS para consumir en bebida, comida y tienda oficial</p>
+    </div>
+
+    <!-- Sección de Cuadros -->
+    <div class="box-container">
+        <div class="box">
+            <h2>PROMO RECARGA 50€+GG</h2>
+            <h3>5€ extra GRATIS</h3>
+            <button class="box-button">Comprar</button>
+        </div>
+        <div class="box">
+            <h2>PROMO RECARGA 100€+GG</h2>
+            <h3>15€ extra GRATIS</h3>
+            <button class="box-button">Comprar</button>
+        </div>
+        <div class="box">
+            <h2>PROMO RECARGA 150€+GG</h2>
+            <h3>30€ extra GRATIS + cuelgavasos</h3>
+            <button class="box-button">Comprar</button>
+        </div>
+    </div>
+</div>
+</article>
+
+
+<article>
+    <div class="cartelera">
+        <img src="images/cartel.jpg" class="imgCartelera">
+    </div>
+</article>
+<!-- Sección con Formulario y Playlist -->
+
+<div class="form-playlist-container">
+    <!-- Formulario -->
+    <div class="form-container" >
+
+        <form>
+            <h2 class="Solicitud">Solicitud de Información</h2>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Manuel"><br><br>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="tunombre@gmail.com"><br><br>
+
+            <label for="pais">País:</label>
+            <input type="text" id="pais" name="pais" placeholder="España" required><br><br>
+
+            <label for="comentario">Agrega tu comentario:</label>
+            <textarea id="comentario" name="comentario" placeholder="Escriba aqui su comentario" maxlength="300"></textarea>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+    <!-- Contenedor de Playlist de Spotify -->
+    <div class="spotify-playlist-container">
+            <h2 class="Solicitud">Ponte a punto con nuestra playlist</h2>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7fGWUy92lpGMUc6V5luffv?utm_source=generator&theme=0"  height="152"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Tears, Sweet, Blood - DC"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2c7sRekhMGlj7u1WIIzoQu?utm_source=generator&theme=0"  height="152"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Fighting My Demons - Ken Carson"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0aPgkDVEJDyWKb22HMJFzk?utm_source=generator&theme=0"  height="152"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="ángeles de Charlie - Soge Culebra, Garabatto"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6ycYqFnXnjMOwMvEMbEpUk?utm_source=generator&theme=0"  height="152"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Blow a Bag - Future"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1r3ZtE2w3l6KMEoAVpt6Fn?utm_source=generator&theme=0"  height="152"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Silent Running (feat. Adeleye Omotayo) - Gorillaz"></iframe>        
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5570VMVvXhONghMCBbzZZE?utm_source=generator&theme=0"  height="152"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Este Verano - Cruz Cafuné"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/22L7bfCiAkJo5xGSQgmiIO?utm_source=generator&theme=0"  height="152"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="All Of The Lights - Kanye West"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2K3Xp4H1Er79eEjhDcXjWX?utm_source=generator&theme=0"  height="152"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Elegant & Gang - D-Block Europe, Ghost Killer Track"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/51kzHiwV2gqYOakB0HGh8d?utm_source=generator&theme=0"  height="152"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Desamparados - Hoke, Louis Amoeba, Ergo Pro, ||| Pekeño"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1ZrkOlKJ9db1cHnL1xEyfd?utm_source=generator&theme=0"  height="152"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Pascommeca - Tayc, Tiakola"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7bp62Lo0nOBcfB70iUoibE?utm_source=generator&theme=0"  height="152"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Barbie de Extrarradio - Melendi"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/24UStI5AYA7g5ufFDh3LH0?utm_source=generator&theme=0"  height="152"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Por la boca vive el pez - Fito y Fitipaldis"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4bEcoz1OcfMgUbp2ft8ieQ?utm_source=generator&theme=0"  height="152"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="911 / Mr. Lonely (feat. Frank Ocean & Steve Lacy) - Tyler, The Creator"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/31I8h26dbVs8TDPQt4HmjU?utm_source=generator&theme=0"  height="152"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Land of Fire - Kordhell"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1MRUsNvM9YGqSTgEzjRtd8?utm_source=generator&theme=0"  height="152"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="BANGLADESH - Abhir Hathi"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2rNDV353sEpIhzxqdfm257?utm_source=generator&theme=0"  height="152"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Me mudé a Madrid - Delaossa, KIDDO, Israel B, Granuja"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1cByP16xx3Bikp74r1TW5f?utm_source=generator&theme=0"  height="152"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Heavyweight - Yeat"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7CzWRneYi3P7dZqJM0SkUs?utm_source=generator&theme=0"  height="152"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="For My People - Joey Bada$$"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0Qqrehp0IC6ppqIUz6mPCe?utm_source=generator&theme=0"  height="152"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="No sigue modas - Juan Magán"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/61KoN6PlBhQD7sivCcf0hA?utm_source=generator&theme=0"  height="152"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Compensating (feat. Young Thug) - Aminé"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7H7NyZ3G075GqPx2evsfeb?utm_source=generator&theme=0"  height="152"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Chamber of Reflection - Mac DeMarco"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6MiVIH3fQlmz44jGx2DXn4?utm_source=generator&theme=0"  height="152"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Love is a Bitch - Two Feet"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7uoFMmxln0GPXQ0AcCBXRq?utm_source=generator&theme=0"  height="152"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Snowman - Sia"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3CpoeW0cZSDzIRv5z34F87?utm_source=generator&theme=0"  height="152"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Sing For The Moment - Eminem"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2x8evxqUlF0eRabbW2JBJd?utm_source=generator&theme=0"  height="152"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Fluorescent Adolescent - Artic Monkeys"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3oUEzTAoOxqZHN4xiqTGqJ?utm_source=generator&theme=0"  height="152"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Bécane - Yame"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4fqzdbIKvcMxjShfk2Yn42?utm_source=generator&theme=0"  height="152"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Internacional - Suite Soprano"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2gY6bnHgZd72p1VghRKCTN?utm_source=generator&theme=0"  height="152"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Let Me Go - Daniel Caesar"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3sHH7lklbfpcraDDvYnjo7?utm_source=generator&theme=0"  height="152"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Bat Country - Avenged Sevenfold"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0tNuJpBgtE65diL6Q8Q7fI?utm_source=generator&theme=0"  height="152"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="On & On - Erykah Badu"></iframe>></iframe>
+    </div>
+</div>
+
+
+
+
+    <!-- Footer -->
+<footer>
+    <p>&copy; 2024 LunaTunes. Todos los derechos reservados.</p>
+</footer>
+
+
+</body>
+</html>
